@@ -1,0 +1,147 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+/* color declarations */
+$black: #202020;
+$background: #DEFFFF;
+$white: #FFF;
+$nav-size: 45px;
+$orange: #AA5C27;
+$blue: #20B9D2;
+
+
+body {
+	margin: 0;
+	font-family:"proxima-nova-soft, sans-serif";
+	background: $background;
+}
+.texture {
+	background: url('/img/pattern-noise.png');
+	opacity: .6;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+.center-block {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.text-center {
+	text-align: center;
+}
+/* Navigation */
+div.navigation-container {
+	@include row ();
+	height: 125px;
+	background-color: $white;
+	border-bottom: 3px solid #e2e2e2;
+}
+div.four {
+	@include span-columns (4);
+	margin: 0;
+}
+.head-title img {
+	width: 250px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	margin-top: 31px;
+}
+#nav-links ul{
+	list-style-type: none;
+	text-align: center;
+	margin-top: 31px;
+}
+#nav-links ul li{
+	display: inline;
+}
+#nav-links li a{
+	font-family: "proxima-nova-extra-condensed";
+	font-weight: 900;
+	color: $black;
+	padding: 10px;
+	font-size: $nav-size;
+	text-decoration: none;
+	height: 125px;
+	transition: background-color 0.5s ease;
+	text-transform: uppercase;
+	padding: 50px 10px;
+	margin: 15px;
+}
+#nav-links li a:hover {
+	background-color: $orange;
+	color: $white;
+
+}
+.logo {
+	width: 250px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Footer */
+.footer {
+	@include row ();
+	height: 300px;
+	background: $white;
+	border-top:3px solid #e2e2e2
+}
+#portrait {
+	width: 120px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#location {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.about {
+	padding-top: 15px;
+}
+.sm-container {
+	padding: 25px;
+}
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+#contact-area {
+	width: 90%;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 90%;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 60px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid $orange;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	height: 30px;
+	float: left;
+	font-size: 15px;
+	text-transform: uppercase
+}
