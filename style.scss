@@ -37,6 +37,9 @@ div.navigation-container {
 	height: 125px;
 	background-color: $white;
 	border-bottom: 3px solid #e2e2e2;
+	position: fixed;
+	width: 100%;
+	z-index: 500;
 }
 div.four {
 	@include span-columns (4);
@@ -81,6 +84,8 @@ div.four {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-left: 200px;
+
 }
 
 /* Footer */
@@ -103,10 +108,13 @@ div.four {
 	display: block;
 }
 .about {
-	padding-top: 15px;
+	padding-top: 35px;
 }
 .sm-container {
 	padding: 25px;
+}
+.sm-container img:hover{
+opacity: .8;
 }
 label {
 	float: left;
@@ -144,4 +152,76 @@ label {
 	float: left;
 	font-size: 15px;
 	text-transform: uppercase
+}
+
+
+
+/* Work Page */
+div.twelve {
+	@include row();
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 150px;
+	text-align: center;
+	display: block;
+}
+div.three {
+	@include span-columns(3);
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.round {
+border-radius: 50%;
+overflow: hidden;
+width: 250px;
+height: 250px;
+border: 5px solid gray;
+position: relative;
+display:  block;
+-webkit-filter: grayscale(1);
+transition:  0.35s ease;
+margin: 10px 0;
+margin-left: auto;
+margin-right: auto;
+}
+.round img {
+display:  block;
+/* Stretch height: 100%; width: 100%; */
+width: 450px;
+}
+.round a {
+	text-decoration: none;
+	color: $black;
+}
+.round:hover{
+	border: 5px solid #fff;
+	-webkit-filter: none;
+}
+.round a:visited{
+	border: 5px solid orange;
+	-webkit-filter: none;
+}
+
+.information{
+	background-color: #fff;
+	color: black;
+	width: 250px;
+	height: 125px;
+	position: absolute;
+	top: -125px;	
+	z-index: 400;
+	transition: 0.35s ease;
+	opacity: .8;
+	border-bottom: 5px solid #dddddd;
+}
+.round:hover > .information {
+	top: 0;
+}
+
+.information h2{
+	font-family: "proxima-nova-extra-condensed";
+	font-weight: 900;
 }
