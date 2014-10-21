@@ -42,7 +42,8 @@ div.navigation-container {
   border-bottom: 3px solid #e2e2e2;
   position: fixed;
   width: 100%;
-  z-index: 500; }
+  z-index: 500;
+  margin-top: 0; }
   div.navigation-container:after {
     content: "";
     display: table;
@@ -84,11 +85,17 @@ div.four {
   transition: background-color 0.5s ease;
   text-transform: uppercase;
   padding: 50px 10px;
-  margin: 15px; }
+  margin: 15px 0;
+  border-radius: 10px; }
 
 #nav-links li a:hover {
   background-color: #AA5C27;
   color: #FFF; }
+
+#nav-links .active {
+  background-color: #AA5C27;
+  color: white;
+  font-weight: 800; }
 
 .logo {
   width: 250px;
@@ -236,5 +243,99 @@ div.three {
 .information h2 {
   font-family: "proxima-nova-extra-condensed";
   font-weight: 900; }
+
+.gallery-main {
+  padding-top: 200px; }
+
+.gallery-main img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 10px; }
+
+.thumbnail-list {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+  .thumbnail-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.thumbnail-list img {
+  width: 100px;
+  transition: 0.15s ease; }
+
+.thumbnail-list img:hover {
+  width: 125px;
+  top: 20px; }
+
+div.blog-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+  padding-top: 150px; }
+  div.blog-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.recent-title {
+  font-size: 45px;
+  border-bottom: 1px solid #202020;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 5px; }
+
+.blog-entry {
+  display: block;
+  border-bottom: 2px solid #e2e2e2;
+  position: relative;
+  padding: 15px; }
+  .blog-entry:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.number {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background-color: #FFF;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #e2e2e2;
+  margin: 10px; }
+  .number:last-child {
+    margin-right: 0; }
+
+.number h1 {
+  font-size: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  font-family: "proxima-nova-extra-condensed"; }
+
+.blog-entry h3 {
+  font-size: 40px;
+  padding: 10px;
+  margin-top: -8px;
+  border-bottom: 1px solid #e2e2e2; }
+
+.blog-entry p {
+  white-space: normal;
+  position: relative;
+  display: block;
+  word-wrap: break-word;
+  margin-left: 120px;
+  margin-top: -30px; }
 
 /*# sourceMappingURL=style.css.map */
