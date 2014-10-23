@@ -6,6 +6,7 @@
     <script>try{Typekit.load();}catch(e){}</script>
     <!--end typekit -->
 	<title> PRISM Advertising </title>
+	<link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -24,8 +25,18 @@
 
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')
 </script>
+	<script src="lib/sweet-alert.min.js"></script> 
 	<script src="notify.js"></script>
-
+<script>
+if(window.location.hash == '#success')
+{
+$.notify("Thank you for your email! We'll be in contact shortly.", "success");
+}
+if(window.location.hash == '#error')
+{
+$.notify("I'm sorry, your email was not sent. Please try again.", "error");
+}
+</script>
 <script>
 $( document ).ready(function() {
           $("#nav-container"). load("/includes/nav.html");
