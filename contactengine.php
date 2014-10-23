@@ -16,14 +16,14 @@ if (!$validationOK) {
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
-$Body .= $Name;
+$Body .= "name: ";
+$Body .= $name;
 $Body .= "\n";
-$Body .= "Email: ";
-$Body .= $Email;
+$Body .= "email: ";
+$Body .= $email;
 $Body .= "\n";
-$Body .= "Message: ";
-$Body .= $Message;
+$Body .= "message: ";
+$Body .= $message;
 $Body .= "\n";
 
 // send email 
