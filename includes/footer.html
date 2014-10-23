@@ -11,7 +11,7 @@
 			<h3 class="text-center"> Contact Me </h3>
 			<div id="contact-area" class="center-block">
 				<form method="post" name="myForm" onsubmit="return validateForm();"action="contactengine.php">
-					<input placeholder="First / Last name"type="text" name="name" id="Name" />
+					<input placeholder="First / Last name"type="text" name="name" id="name" />
 							
 					<input placeholder="Email"type="text" name="email" id="Email" />
 					<br />
@@ -29,7 +29,17 @@ function validateForm() {
     var atpos = x.indexOf("@");
     var dotpos = x.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        swal("Error", "Not a valid email address");
+        swal("Error", "Not a valid email address" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["name"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Your name must be filled out!" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["message"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Don't you want to leave a message?" , "error");
         return false;
     }
 }
