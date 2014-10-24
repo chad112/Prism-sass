@@ -382,6 +382,41 @@ div.blog-container {
       margin-right: 0; }
 
   .head-title img {
-    display: none; } }
+    display: none; }
+
+  .round {
+    width: 200px;
+    height: 200px; }
+
+  .logo {
+    width: 180px;
+    margin-left: 20px; }
+
+  #nav-links ul li a {
+    padding: 30px 5px;
+    margin: 0;
+    font-size: 40px; }
+
+  #nav-links ul li {
+    padding: 0;
+    margin: 0; }
+
+  #nav-links ul {
+    padding: 0;
+    padding-right: 5px; }
+
+  div.four {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    width: 50; }
+    div.four:last-child {
+      margin-right: 0; }
+
+  #nav-links .active {
+    background-color: white;
+    color: #AA5C27;
+    font-weight: 800; } }
 
 /*# sourceMappingURL=style.css.map */
