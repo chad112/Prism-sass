@@ -1,3 +1,4 @@
+
 <div class="navigation-container">
 	<div class="four head-title">
 		<img src="img/prism-lettering.png">
@@ -14,11 +15,13 @@
 
 	</div>
 </div>
-
 <script>
-    $("#nav-links li a").on("click", function() {
-      $("#nav-links li a").removeClass("active");
-      $(this).addClass("active");
-    });
 
+$(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/blog.html/.test(loc)) {
+    $('#blog').addClass('active');
+    $('#work').removeClass('active');
+  }
+});
 </script>
