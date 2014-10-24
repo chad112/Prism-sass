@@ -152,7 +152,7 @@ label {
 
 #contact-area input, #contact-area textarea {
   padding: 5px;
-  width: 90%;
+  width: 100%;
   font-family: Helvetica, sans-serif;
   font-size: 1.4em;
   margin: 0px 0px 10px 0px;
@@ -254,7 +254,11 @@ div.three {
   width: 70%; }
 
 .gallery-main p {
-  font-family: "proxima-nova-soft"; }
+  font-family: "proxima-nova-soft";
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
 .thumbnail-list {
   display: block;
@@ -347,6 +351,9 @@ div.blog-container {
   margin-left: 120px;
   margin-top: -30px; }
 
+textarea {
+  font-size: 10px; }
+
 @media screen and (max-width: 1300px) {
   div.three {
     float: left;
@@ -365,7 +372,7 @@ div.blog-container {
     margin-left: auto; }
 
   .sm-container img {
-    width: 80px; } }
+    width: 100px; } }
 @media screen and (max-width: 850px) {
   div.three {
     float: left;
@@ -381,7 +388,9 @@ div.blog-container {
 
   .logo {
     width: 180px;
-    margin-left: 20px; }
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
 
   #nav-links ul li a:hover {
     color: #aa5c27;

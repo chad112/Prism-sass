@@ -1,18 +1,11 @@
 <?php
 
-$EmailFrom = "contact@chadschaub.com";
+$EmailFrom = "mrdraper@chadschaub.com";
 $EmailTo = "chad@chadschaub.com";
 $Subject = "PRISM Inquiry";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
 $Message = Trim(stripslashes($_POST['Message'])); 
-
-// validation
-$validationOK=true;
-if (!$validationOK) {
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
-  exit;
-}
 
 // prepare email body text
 $Body = "";
