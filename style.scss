@@ -332,3 +332,29 @@ div.blog-container {
 	font-size: 30px;
 	z-index: 300;
 }
+
+@media (max-width:1300px) {
+	div.three {
+		@include span-columns(4);
+		width: 33%;
+		margin: 0;
+	}
+	div.twelve {
+		width: 100%;
+	}
+	.logo {
+		margin-left: auto;
+	}
+	.sm-container img {
+		width: 80px;
+	}
+}
+@media (max-width: 850px) {
+	div.three {
+		@include span-columns (6);
+		margin: 0;
+	}
+	.head-title img {
+		display: none;
+	}
+}
