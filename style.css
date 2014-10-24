@@ -417,6 +417,60 @@ div.blog-container {
   #nav-links .active {
     background-color: white;
     color: #AA5C27;
-    font-weight: 800; } }
+    font-weight: 800; }
+
+  .four.about {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    width: 100%; }
+    .four.about:last-child {
+      margin-right: 0; }
+
+  .four.contact {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    width: 100%; }
+    .four.contact:last-child {
+      margin-right: 0; }
+
+  .four.sm {
+    display: block;
+    width: 100%; }
+    .four.sm:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+  .sm-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 100%; }
+
+  .footer {
+    height: 800px; }
+
+  #contact-area input {
+    width: 100%; }
+
+  #contact-area textarea {
+    width: 100%; }
+
+  .round {
+    -webkit-filter: none;
+    border: 5px solid #fff; }
+
+  .round:hover {
+    -webkit-filter: none; }
+
+  .information {
+    top: 0;
+    width: 200px;
+    opacity: .8; } }
 
 /*# sourceMappingURL=style.css.map */
