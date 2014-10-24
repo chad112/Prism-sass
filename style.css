@@ -471,8 +471,9 @@ div.blog-container {
   .thumbnail-list {
     width: 100%; }
 
-  .thumbnail-list:hover {
-    width: 100px; }
+  .thumbnail-list img:hover {
+    width: 100px;
+    top: 0; }
 
   .gallery-main img {
     width: 100%; } }

@@ -426,8 +426,9 @@ div.blog-container {
 	.thumbnail-list {
 		width: 100%;
 	}
-	.thumbnail-list:hover {
+	.thumbnail-list img:hover {
 		width: 100px;
+		top: 0;
 	}
 	.gallery-main img {
 		width: 100%;
