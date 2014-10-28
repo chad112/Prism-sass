@@ -354,7 +354,7 @@ div.blog-container {
 textarea {
   font-size: 10px; }
 
-@media screen and (max-width: 1300px) {
+@media all and (min-width: 800px) and (max-width: 1300px) {
   div.three {
     float: left;
     display: block;
@@ -373,7 +373,7 @@ textarea {
 
   .sm-container img {
     width: 100px; } }
-@media screen and (max-width: 850px) {
+@media all and (min-width: 500px) and (max-width: 800px) {
   div.three {
     float: left;
     display: block;
@@ -537,7 +537,7 @@ textarea {
     margin-left: 0;
     margin-right: 0;
     margin-top: -30px; } }
-@media screen and (max-width: 550px) {
+@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .round {
     width: 200px;
     height: 200px; }

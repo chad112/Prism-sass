@@ -336,7 +336,7 @@ textarea {
 }
 
 
-@media screen and(max-width:1300px) {
+@media all and (min-width: 800px) and (max-width:1300px) {
 	div.three {
 		@include span-columns(4);
 		width: 33%;
@@ -352,7 +352,7 @@ textarea {
 		width: 100px;
 	}
 }
-@media screen and(max-width: 850px) {
+@media all and (min-width: 500px) and (max-width: 800px) {
 	div.three {
 		@include span-columns (6);
 		margin: 0;
@@ -493,7 +493,9 @@ textarea {
 
 }
 
-@media screen and(max-width:550px){
+@media all and
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
 	.round {
 		width: 200px;
 		height: 200px;
@@ -501,4 +503,5 @@ textarea {
 	.information {
 		width: 200px;
 	}
+
 }
