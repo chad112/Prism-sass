@@ -456,7 +456,7 @@ textarea {
     width: 100%; }
 
   .footer {
-    height: 800px; }
+    height: 750px; }
 
   #contact-area input {
     width: 100%; }
@@ -772,6 +772,20 @@ textarea {
     font-weight: 600; }
 
   div.navigation-container {
-    position: relative; } }
+    position: relative; }
+
+  div.twelve {
+    padding-top: 0; }
+
+  h1.recent-title {
+    font-size: 90px; }
+
+  div.blog-entry h3 {
+    font-size: 60px;
+    padding: 0 10px; }
+
+  div.blog-entry p {
+    font-size: 25px;
+    padding: 0 10px; } }
 
 /*# sourceMappingURL=style.css.map */
