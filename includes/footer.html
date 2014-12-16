@@ -1,10 +1,10 @@
 <div class="footer">
 
 	<div class="four about">
-		<img id="portrait"src="/img/portrait.png">
+		<img id="portrait"src="img/portrait.png">
 				<p class="text-center">My name is Chad. I'm a designer + front end developer.
 				</p>
-				<img id="location"src="/img/location.png">
+				<img id="location"src="img/location.png">
 	</div>
 
 	<div class="four contact">
@@ -12,7 +12,7 @@
 			<div id="contact-area" class="center-block">
 				<form method="post" name="myForm" onsubmit="return validateForm();"action="contactengine.php">
 					<input style="font-size: 15px;"placeholder="First / Last name"type="text" name="Name" id="Name" />
-							
+
 					<input style="font-size: 15px;"placeholder="Email"type="text" name="Email" id="Email" />
 					<br />
 					<textarea style="font-size: 15px;"placeholder="Message" name="Message" rows="5" cols="5" id="Message"></textarea>
@@ -20,10 +20,10 @@
 					<input type="submit" name="Submit" value="Submit" class="submit-button" />
 				</form>
 			</div>
-					
-	</div> 
 
-<script> 
+	</div>
+
+<script>
 function validateForm() {
     var x = document.forms["myForm"]["Email"].value;
     var atpos = x.indexOf("@");
@@ -44,7 +44,7 @@ function validateForm() {
     }
 }
 </script>
-	<script src="lib/sweet-alert.min.js"></script> 
+	<script src="lib/sweet-alert.min.js"></script>
 	<script src="notify.js"></script>
 <script>
 if(window.location.hash == '#success')
@@ -60,10 +60,9 @@ $.notify("I'm sorry, your email was not sent. Please try again.", "error");
 	<div class="four sm">
 		<h3 class="text-center"> Follow Me </h3>
 					<div class="sm-container text-center">
-						<a href="http://www.facebook.com/caschaub" target="blank"><img src="/img/sm/facebook.png"></a>
+						<a href="http://www.facebook.com/caschaub" target="blank"><img src="img/sm/facebook.png"></a>
 						<!--<a href="#"><img src="/img/sm/dribbble.png"></a>-->
-						<a href="http://instagram.com/chadschaub" target="blank"><img src="/img/sm/instagram.png"></a>
+						<a href="http://instagram.com/chadschaub" target="blank"><img src="img/sm/instagram.png"></a>
 					</div>
 	</div>
 </div>
-

@@ -19,7 +19,7 @@ body {
   background: #DEFFFF; }
 
 .texture {
-  background: url("/img/pattern-noise.png");
+  background: url("img/pattern-noise.png");
   opacity: .6;
   position: fixed;
   width: 100%;
@@ -196,6 +196,17 @@ div.three {
   div.three:last-child {
     margin-right: 0; }
 
+div.six {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto; }
+  div.six:last-child {
+    margin-right: 0; }
+
 .round {
   border-radius: 50%;
   overflow: hidden;
@@ -204,7 +215,6 @@ div.three {
   border: 5px solid gray;
   position: relative;
   display: block;
-  -webkit-filter: grayscale(1);
   transition: 0.35s ease;
   margin: 10px 0;
   margin-left: auto;
@@ -292,10 +302,34 @@ div.blog-container {
     display: table;
     clear: both; }
 
+div.resume-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 60%;
+  padding-top: 200px;
+  background: white; }
+  div.resume-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 .recent-title {
   font-size: 45px;
   border-bottom: 1px solid #202020;
   text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-family: "proxima-nova-extra-condensed"; }
+
+.resume-title {
+  font-size: 45px;
+  border-bottom: 1px solid #202020;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
   text-transform: uppercase;
   padding-bottom: 5px;
   font-family: "proxima-nova-extra-condensed"; }
