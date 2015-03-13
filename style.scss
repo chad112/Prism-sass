@@ -10,7 +10,16 @@ $orange: #AA5C27;
 $blue: #20B9D2;
 $gray: #e2e2e2;
 
-
+ul {
+	list-style-type: none;
+}
+li {
+	list-style-type: none;
+	display: inline;
+}
+a {
+	text-decoration: none;
+}
 body {
 	margin: 0;
 	font-family:"proxima-nova-extra-condensed, sans-serif";
@@ -268,10 +277,6 @@ width: 450px;
 	transition: 0.15s ease;
 }
 
-.thumbnail-list img:hover {
-	width: 125px;
-	top: 20px;
-}
 
 div.blog-container {
 	@include row();

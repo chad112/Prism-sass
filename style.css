@@ -13,6 +13,16 @@ html {
   box-sizing: inherit; }
 
 /* color declarations */
+ul {
+  list-style-type: none; }
+
+li {
+  list-style-type: none;
+  display: inline; }
+
+a {
+  text-decoration: none; }
+
 body {
   margin: 0;
   font-family: "proxima-nova-extra-condensed, sans-serif";
@@ -285,10 +295,6 @@ div.six {
 .thumbnail-list img {
   width: 100px;
   transition: 0.15s ease; }
-
-.thumbnail-list img:hover {
-  width: 125px;
-  top: 20px; }
 
 div.blog-container {
   display: block;
