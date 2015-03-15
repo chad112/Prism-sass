@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<html lang="en" ng-app="prismApp">
 <head>
 	<!--Typekit -->
     <script src="//use.typekit.net/qlf1ifk.js"></script>
@@ -8,35 +9,105 @@
 	<link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="css/animate.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
 <body>
 	<div class="texture">
 	</div>
-	<div id="nav-container">
-	</div>
-	<div id="container">
+    <div class="navigation-container">
+	<div class="four head-title">
+		<a href="/"><img src="img/prism-lettering.png"></a>
 
 	</div>
-	<div id="footer-container">
+	<div class="four">
+		<a href="/"><img class="logo"src="img/prism-logo.png"></a>
+	</div>
+	<div class="four" id="nav-links">
+		<ul>
+			<li><a class="active"id="work"href="/"> Work </a></li>
+			<li><a class="" id="blog"href="blog.html"> Blog </a></li>
+			<li><a class="" id="resume"href="resume.html"> Resume </a></li>
+			<!--<li><a class="" id="store"href="#store"> Store </a></li>-->
+
+	</div>
+</div>
+        
+        
+<div ng-view></div>
+        
+        
+<div class="footer">
+
+	<div class="four about">
+		<img id="portrait"src="img/portrait.png">
+				<p class="text-center">My name is Chad. I'm a designer + front end developer.
+				</p>
+				<img id="location"src="img/location.png">
 	</div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-</script>
+	<div class="four contact">
+			<h3 class="text-center"> Contact Me </h3>
+			<div id="contact-area" class="center-block">
+				<form method="post" name="myForm" onsubmit="return validateForm();"action="contactengine.php">
+					<input style="font-size: 15px;"placeholder="First / Last name"type="text" name="Name" id="Name" />
 
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')
-</script>
+					<input style="font-size: 15px;"placeholder="Email"type="text" name="Email" id="Email" />
+					<br />
+					<textarea style="font-size: 15px;"placeholder="Message" name="Message" rows="5" cols="5" id="Message"></textarea>
+
+					<input type="submit" name="Submit" value="Submit" class="submit-button" />
+				</form>
+			</div>
+
+	</div>
 
 <script>
-$( document ).ready(function() {
-          $("#nav-container"). load("includes/nav.html");
-        });
-$( document ).ready(function() {
-          $("#container"). load("includes/work.html");
-        });
-
-$( document ).ready(function() {
-          $("#footer-container"). load("includes/footer.html");
-        });
+function validateForm() {
+    var x = document.forms["myForm"]["Email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        swal("Error", "Not a valid email address" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["Name"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Your name must be filled out!" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["Message"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Don't you want to leave a message?" , "error");
+        return false;
+    }
+}
+</script>
+	<script src="lib/sweet-alert.min.js"></script>
+	<script src="notify.js"></script>
+<script>
+if(window.location.hash == '#success')
+{
+$.notify("Thank you for your email! We'll be in contact shortly.", "success");
+}
+if(window.location == '#error')
+{
+$.notify("I'm sorry, your email was not sent. Please try again.", "error");
+}
 </script>
 
+	<div class="four sm">
+		<h3 class="text-center"> Follow Me </h3>
+					<div class="sm-container text-center">
+						<a href="http://www.facebook.com/caschaub" target="blank"><img src="img/sm/facebook.png"></a>
+						<!--<a href="#"><img src="/img/sm/dribbble.png"></a>-->
+						<a href="http://instagram.com/chadschaub" target="blank"><img src="img/sm/instagram.png"></a>
+					</div>
+	</div>
+</div>
+
+
 </body>
+        </html>
