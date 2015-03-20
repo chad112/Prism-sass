@@ -16,3 +16,11 @@ prismControllers.controller('blogCtrl', ['$scope', '$http',
 
     $scope.orderProp = 'age';
   }]);
+prismControllers.controller('workCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('includes/gallery.html').success(function(data) {
+      $scope.phones = data;
+    });
+
+    $scope.orderProp = 'age';
+  }]);
