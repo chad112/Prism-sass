@@ -559,8 +559,7 @@ textarea {
 }
 
 @media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+(-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px) {
 
 	div.three {
 		width: 50%;

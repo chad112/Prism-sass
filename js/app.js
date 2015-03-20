@@ -159,6 +159,62 @@ prismApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/oops'
       });
+      $routeProvider.
+      when('/apocalypse', {
+        templateUrl: 'apocalypse.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      $routeProvider.
+      when('/easter', {
+        templateUrl: 'easter.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      $routeProvider.
+      when('/story', {
+        templateUrl: 'story.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+       $routeProvider.
+      when('/we-believe', {
+        templateUrl: 'we-believe.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      $routeProvider.
+      when('/hope-island', {
+        templateUrl: 'hope-island.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      $routeProvider.
+      when('/did-you-know', {
+        templateUrl: 'did-you-know.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      $routeProvider.
+      when('/tell-the-world', {
+        templateUrl: 'tell-the-world.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
   }]);
 
 prismApp.directive('galleryThumbs', function() { return { restrict: 'E', templateUrl: 'includes/gallery.html' }; });
