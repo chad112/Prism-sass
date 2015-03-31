@@ -1,6 +1,7 @@
 var prismApp = angular.module('prismApp', [
   'ngRoute',
-  'prismControllers'
+  'prismControllers',
+	'ngAnimate'
 ]);
 
 prismApp.config(['$routeProvider',

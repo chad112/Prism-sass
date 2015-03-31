@@ -2,7 +2,7 @@ var prismControllers = angular.module('prismControllers', []);
 
 prismControllers.controller('galleryCtrl', ['$scope', '$http',
   function ($scope, $http) {
-    $http.get('includes/work.html').success(function(data) {
+    $http.get('').success(function(data) {
       $scope.phones = data;
     });
 
