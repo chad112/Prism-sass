@@ -9,11 +9,52 @@ $nav-size: 45px;
 $orange: #AA5C27;
 $blue: #20B9D2;
 $gray: #e2e2e2;
-
-.banner {
+.overlay {
+	opacity:100;
+	position:fixed;
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	overflow: hidden;
+	display:table;
+	-webkit-animation: easeOut 1s forwards; 
+  animation: splash 10s forwards;
+	z-index: 9998;
+	@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px) {
+		display: none;
+	}
+	@media all and (max-width: 550px){
+		display: none;
+	}
+}
+.angular-container {
+	padding-top: 140px;
+}
+.overlay img {
+	min-height: 100%;
 	width: 100%;
-	height: auto;
-	padding-top: 30px;
+	display: block;
+	margin: 0 auto;
+}
+.announce {
+	z-index: 9999;
+	font-size: 200px;
+	color: white;
+	font-weight: 800;
+	font-family: 'proxima-nova-extra-condensed';
+	position: fixed;
+	left: 15%;
+	top: 15%;
+	
+}
+.banner {
+	background-size: cover;
+	background-image: url('img/banner.png');
+	padding-top: 80px;
+	margin: 0;
+	width: 1280px;
+	height: 500px;
+	z-index: -800;
 }
 
 ul {
@@ -99,8 +140,7 @@ div.four {
 	border-radius: 10px;
 }
 #nav-links li a:hover {
-	background-color: $orange;
-	color: $white;
+	color: $orange;
 
 }
 #nav-links .active {
@@ -195,6 +235,7 @@ div.twelve {
 	margin-right: auto;
 	text-align: center;
 	display: block;
+	position: relative;
 }
 div.three {
 	@include span-columns(3);
@@ -253,16 +294,25 @@ width: 550px;
 }
 
 .gallery-main {
-	padding-top: 200px;
+	padding-top: 50px;
 	font-family: "proxima-nova-extra-condensed";
 }
-.gallery-main img {
+.large {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	padding: 10px;
 	width: 70%;
 }
+.medium {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 10px;
+	width: 40%;
+}
+
+	
 .gallery-main p {
 	font-family: "proxima-nova-soft";
 	width: 70%;
@@ -281,7 +331,10 @@ width: 550px;
 }
 .thumbnail-list img {
 	width: 100px;
-	transition: 0.15s ease;
+	transition: 0.5s ease;
+}
+.thumbnail-list img:hover {
+	-webkit-filter: brightness(1.5);
 }
 
 
@@ -291,7 +344,6 @@ div.blog-container {
 	margin-right: auto;
 	display: block;
 	width: 60%;
-	padding-top: 150px;
 }
 div.resume-container {
 	@include row();
@@ -451,6 +503,9 @@ textarea {
 	}
 	.footer {
 		height: 750px;
+		width: 100%;
+		display: block;
+		position: relative;
 	}
 	#contact-area input {
 		width: 100%;
@@ -783,6 +838,24 @@ textarea {
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     /* easeOutQuad */
 }
+.page-all .toggle .ng-enter {
+	-webkit-transition: none;
+}
+.page-all .toggle .ng-leave {
+	-webkit-transition: none;
+}
+.page-web .toggle .ng-enter {
+	-webkit-transition: none;
+}
+.page-web .toggle .ng-leave {
+	-webkit-transition: none;
+}
+.page-print .toggle .ng-enter {
+	-webkit-transition: none;
+}
+.page-print .toggle .ng-leave {
+	-webkit-transition: none;
+}
 
 .toggle.ng-enter {
     opacity: 0;
@@ -823,5 +896,13 @@ textarea {
 
 .toggle.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
+}
+
+.sort-icons {
+	padding: 15px;
+	color: $orange;
+}
+.sort-icons li a {
+	color: $orange;
 }
 

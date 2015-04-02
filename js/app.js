@@ -9,7 +9,7 @@ prismApp.config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'includes/all.html',
-        controller: 'galleryCtrl'
+        controller: 'allCtrl'
       }).
       otherwise({
         redirectTo: '/oops'
@@ -18,7 +18,7 @@ prismApp.config(['$routeProvider',
     $routeProvider.
       when('/web', {
         templateUrl: 'includes/web.html',
-        controller: 'galleryCtrl'
+        controller: 'webCtrl'
       }).
       otherwise({
         redirectTo: '/oops'
@@ -27,7 +27,7 @@ prismApp.config(['$routeProvider',
     $routeProvider.
       when('/print', {
         templateUrl: 'includes/print.html',
-        controller: 'galleryCtrl'
+        controller: 'printCtrl'
       }).
       otherwise({
         redirectTo: '/oops'
@@ -36,7 +36,7 @@ prismApp.config(['$routeProvider',
       $routeProvider.
       when('/all', {
         templateUrl: 'includes/all.html',
-        controller: 'galleryCtrl'
+        controller: 'allCtrl'
       }).
       otherwise({
         redirectTo: '/oops'

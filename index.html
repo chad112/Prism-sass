@@ -15,29 +15,36 @@
     <script src="js/controllers.js"></script>
 </head>
 <body>
+	<div id="splash"class="overlay">
+	<h1 class="announce">Welcome to Prism</h1>
+	<img src="img/banner2.png"></div>
 	<div class="texture">
 	</div>
     <div class="navigation-container">
 	<div class="four head-title">
-		<a href="/"><img src="img/prism-lettering.png"></a>
+		<a href="/#/"><img src="img/prism-lettering.png"></a>
 
 	</div>
 	<div class="four">
-		<a href="/"><img class="logo"src="img/prism-logo.png"></a>
+		<a href="/#/"><img class="logo"src="img/prism-logo.png"></a>
 	</div>
 	<div class="four" id="nav-links">
 		<ul>
-			<li><a ng-click="gotoWork()" class="active"id="work"href="index.html"> Work </a></li>
+			<li><a id="work"  href="#all"> Work </a></li>
 			<li><a class="" id="blog"href="#/blog"> Blog </a></li>
 			<!--<li><a class="" id="resume"href="#/resume"> Resume </a></li>-->
 			<!--<li><a class="" id="store"href="#store"> Store </a></li>-->
 
 	</div>
 </div>
-
+<script>
+$("#nav-links ul li a").click(function (){
+   $(this).toggleClass('active')
+});
+</script>
 <!-- NG VIEW CONTAINER -->
 			
-<div ng-view class="toggle" autoscroll="true"></div>
+<div ng-view class="toggle angular-container" autoscroll="true"></div>
         
 <!-- FOOTER START -->
 <div id="footer"class="footer">
@@ -111,22 +118,12 @@
 						</div>
 		</div>
 	</div>
-	<script>
-				(function() {
-		$('a[href*=#]:not([href=#])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
-					return false;
-				}
-			}
-		});
-	});
-				</script>
+<script>
+			window.setTimeout(
+    function(){
+        $('#splash').fadeOut('slow');
+    },1200);
+			</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
         </html>
