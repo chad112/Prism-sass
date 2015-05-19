@@ -32,7 +32,7 @@ prismControllers.controller('webCtrl', ['$scope', '$http',
   }]);
 prismControllers.controller('blogCtrl', ['$scope', '$http',
   function ($scope, $http) {
-    $http.get('blog.html').success(function(data) {
+    $http.get('').success(function(data) {
       $scope.phones = data;
     });
 

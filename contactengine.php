@@ -3,9 +3,9 @@
 $EmailFrom = "mrdraper@chadschaub.com";
 $EmailTo = "chad@chadschaub.com";
 $Subject = "PRISM Inquiry";
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+$Name = Trim(stripslashes($_POST['Name']));
+$Email = Trim(stripslashes($_POST['Email']));
+$Message = Trim(stripslashes($_POST['Message']));
 
 // prepare email body text
 $Body = "";
@@ -19,15 +19,15 @@ $Body .= "Message: ";
 $Body .= $Message;
 $Body .= "\n";
 
-// send email 
+// send email
 $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
-// redirect to success page 
+// redirect to success page
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=/index.html#success\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=index.html#success\">";
   echo '<script>$.notify("Thank you for your order. We will contact you shortly.", "info");</script>';
 }
 else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=/index.html#error\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=index.html#error\">";
 }
 ?>

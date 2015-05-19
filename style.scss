@@ -1,34 +1,24 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 /* color declarations */
 $black: #202020;
 $background: #DloEFFFF;
 $white: #FFF;
-$nav-size: 45px;
+$nav-size: 30px;
 $orange: #AA5C27;
 $blue: #20B9D2;
 $gray: #e2e2e2;
-.overlay {
-	opacity:100;
-	position:fixed;
-	padding: 0;
-	margin: 0;
-	min-height: 100%;
-	overflow: hidden;
-	display:table;
-	-webkit-animation: easeOut 1s forwards; 
-  animation: splash 10s forwards;
-	z-index: 9998;
-	@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px) {
-		display: none;
-	}
-	@media all and (max-width: 550px){
-		display: none;
-	}
-}
+
+/* Breakpoints */
+$break-large: max-width 1000px;
+$break-medium: max-width 768px;
+$break-small: max-width 550px;
+$break-mobile: (-webkit-min-device-pixel-ratio: 2)(max-device-width: 667px);
+
 .angular-container {
-	padding-top: 140px;
+	padding-top: 70px;
 }
 .overlay img {
 	min-height: 100%;
@@ -97,7 +87,7 @@ body {
 /* Navigation */
 div.navigation-container {
 	@include row ();
-	height: 125px;
+	height: 70px;
 	background-color: $white;
 	border-bottom: 3px solid #e2e2e2;
 	position: fixed;
@@ -108,32 +98,47 @@ div.navigation-container {
 div.four {
 	@include span-columns (4);
 	margin: 0;
+    @include breakpoint ($break-medium) {
+    @include span-columns (12);
+    
+    }
+    @include breakpoint ($break-mobile) {
+    @include span-columns (12);
+    
+    }
 }
 .head-title img {
-	width: 250px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	margin-top: 21px;
+    padding: 5px;
+    display: block;
+    position: relative;
+    float: left;
+    @include breakpoint($break-small) {
+        width: 150px;
+        margin-top: 10px;
+    }
+}
+#nav-links {
+    float: right;
+    padding-right: 10px;
 }
 #nav-links ul{
 	list-style-type: none;
-	text-align: center;
-	margin-top: 31px;
+	text-align: right;
+	margin-top: 15px;
+    float: right;
 }
 #nav-links ul li{
 	display: inline;
 }
 #nav-links li a{
 	font-family: "proxima-nova-extra-condensed";
-	font-weight: 900;
+	font-weight: 200;
 	color: $black;
 	padding: 10px;
 	font-size: $nav-size;
 	text-decoration: none;
 	height: 125px;
-	transition: background-color 0.5s ease;
+	transition:  0.5s ease;
 	text-transform: uppercase;
 	padding: 50px 10px;
 	margin: 15px 0;
@@ -149,7 +154,7 @@ div.four {
 	font-weight: 800;
 }
 .logo {
-	width: 250px;
+	width: 140px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -161,9 +166,17 @@ div.four {
 .footer {
 	@include row ();
 	height: 300px;
+    width: 100%;
 	background: $white;
 	border-top:3px solid #e2e2e2;
 	font-family: "proxima-nova-extra-condensed";
+    overflow: hidden;
+    @include breakpoint($break-medium){
+        background: none;
+    }
+    @include breakpoint($break-mobile){
+        background: none;
+    }
 }
 #portrait {
 	width: 120px;
@@ -242,6 +255,15 @@ div.three {
 	width: 25%;
 	margin-left: auto;
 	margin-right: auto;
+    @include breakpoint($break-medium) {
+    width: 33.33%;
+    }
+    @include breakpoint($break-mobile) {
+    width: 33.33%;
+    }
+    @include breakpoint($break-small) {
+    width: 50%;
+    }
 }
 div.six {
 	@include span-columns(6);
@@ -250,14 +272,27 @@ div.six {
 	margin-right: auto;
 }
 .round {
-overflow: hidden;
-width: 100%;
-height: 300px;
-position: relative;
-display:  block;
-transition:  0.35s ease;
-margin-left: auto;
-margin-right: auto;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display:  block;
+    transition:  0.35s ease;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint($break-large) {
+        height: 250px;
+    }
+    @include breakpoint($break-medium) {
+        height: 200px;
+    }
+    @include breakpoint($break-mobile) {
+        height: 200px;
+    }
+    @include breakpoint($break-small) {
+        height: 150px;
+    }
+    
 }
 .round img {
 display:  block;
@@ -269,7 +304,7 @@ width: 550px;
 	color: $black;
 }
 .round:hover{
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: brightness(1.5);
 }
 
 .information{
@@ -283,6 +318,25 @@ width: 550px;
 	transition: 0.35s ease;
 	opacity: .8;
 	border-bottom: 5px solid #dddddd;
+    font-size: 15px;    
+    @include breakpoint($break-medium) {
+        top: 0;
+        position: relative;
+        transition: 0;
+        z-index: 450;
+        height: 60px;
+        border-bottom: none;
+        opacity: .5;
+    }
+     @include breakpoint($break-mobile) {
+        top: 0;
+        position: relative;
+        transition: 0;
+        z-index: 450;
+        height: 60px;
+        border-bottom: none;
+        opacity: .5;
+    }
 }
 .round:hover > .information {
 	top: 0;
@@ -291,18 +345,43 @@ width: 550px;
 .information h2{
 	font-family: "proxima-nova-extra-condensed";
 	font-weight: 900;
+    @include breakpoint($break-medium){
+        margin: 0 auto;
+        padding: 0;
+        font-size: 20px;
+    }
+    @include breakpoint($break-mobile){
+        margin: 0 auto;
+        padding: 0;
+        font-size: 20px;
+    }
+}
+.information p {
+    display: block;
+    @include breakpoint($break-medium){
+        display: none;
+    }
+    @include breakpoint($break-mobile){
+        display: none;
+    }
 }
 
 .gallery-main {
-	padding-top: 50px;
 	font-family: "proxima-nova-extra-condensed";
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    @include breakpoint ($break-medium) {
+        width: 100%;
+    }
+    @include breakpoint ($break-mobile) {
+        width: 100%;
+    }
 }
 .large {
-	margin-left: auto;
-	margin-right: auto;
 	display: block;
 	padding: 10px;
-	width: 70%;
+	width: 100%
 }
 .medium {
 	margin-left: auto;
@@ -310,28 +389,44 @@ width: 550px;
 	display: block;
 	padding: 10px;
 	width: 40%;
+    @include breakpoint ($break-medium) {
+        width: 60%;
+    }
+    @include breakpoint ($break-mobile) {
+        width: 60%;
+    }
 }
 
 	
 .gallery-main p {
 	font-family: "proxima-nova-soft";
 	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	display: block;
 }
 .thumbnail-list {
 	@include row();
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 80%;
+	margin: 0 auto;
 	display: block;
 	text-align: center;
-
+    padding: 0;
+    @include breakpoint($break-medium) {
+        width: 100%;
+    }
+    @include breakpoint($break-mobile) {
+        width: 100%;
+    }
 }
 .thumbnail-list img {
 	width: 100px;
 	transition: 0.5s ease;
+    @include breakpoint($break-medium) {
+        width: 60px;
+    }
+    @include breakpoint($break-mobile) {
+        width: 60px;
+    }
 }
 .thumbnail-list img:hover {
 	-webkit-filter: brightness(1.5);
@@ -343,7 +438,13 @@ div.blog-container {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 60%;
+	width: 80%;
+    @include breakpoint($break-medium) {
+        width: 95%;
+    }
+    @include breakpoint($break-mobile) {
+        width: 95%;
+    }
 }
 div.resume-container {
 	@include row();
@@ -377,450 +478,69 @@ div.resume-container {
 
 .blog-entry {
 	@include row();
-	border-bottom: 2px solid $gray;
 	position: relative;
-	padding: 15px;
 	padding-left: auto;
 	padding-right: auto;
 	display: block;
 	font-family: "proxima-nova-soft";
 }
 
-.number {
-	@include span-columns(3);
-	background-color: $white;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	border: 3px solid $gray;
-	margin: 10px;
-}
-.number h1{
-	font-size: 70px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	text-align: center;
-	margin-top: 5px;
-	font-family: "proxima-nova-extra-condensed";
-}
-.blog-entry h3 {
-	font-size: 40px;
-	padding: 10px;
-	margin-top: -8px;
+.blog-entry h4 {
+	font-size: 15px;
+	margin-top: -20px;
 	border-bottom: 1px solid $gray;
+    font-style: italic;
+    padding-bottom: 5px;
+    
+}
+.reference {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    display: block;
 }
 .blog-entry p {
 	white-space: normal;
 	position: relative;
 	display: block;
 	word-wrap: break-word;
-	margin-left: 120px;
-	margin-top: -30px;;
+}
+.blog-entry span {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: center;
 }
 
+.blog-tutorial-img {
+    width: 60%;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    @include breakpoint($break-medium){
+        width: 100%;
+    }
+    @include breakpoint($break-mobile){
+        width: 100%;
+    }
+}
+.thumbnail-blog {
+    width: 49%;
+    padding: 10px 0;
+    border-radius: 25px;
+    @include breakpoint ($break-medium) {
+        width: 100%;
+    }
+    @include breakpoint ($break-mobile) {
+        width: 100%;
+    }
+}
 textarea {
 	font-size: 10px;
 }
 
 
-@media all and (min-width: 800px) and (max-width: 1250px) {
-	div.three {
-		@include span-columns(4);
-		width: 33%;
-		margin: 0;
-	}
-	div.twelve {
-		width: 100%;
-	}
-	.logo {
-		margin-left: auto;
-	}
-	.sm-container img {
-		width: 100px;
-	}
-}
-@media all and (max-width: 799px) {
-	div.three {
-		@include span-columns (6);
-		margin: 0;
-	}
-	.head-title img {
-		display: none;
-	}
 
-	.logo {
-		width: 180px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
-	#nav-links ul li a:hover {
-		color: #aa5c27;
-		background-color: $white;
-	}
-	#nav-links ul li a{
-		padding: 30px 5px;
-		margin: 0;
-		font-size: 40px;
-	}
-	#nav-links ul li{
-		padding: 0;
-		margin: 0;
-
-	}
-	#nav-links ul {
-		padding: 0;
-		padding-right: 5px;
-	}
-	div.four {
-		@include span-columns (6);
-
-	}
-	#nav-links .active {
-	background-color:white;;
-	color: #AA5C27;
-	font-weight: 800;
-	}
-	.four.about {
-		@include span-columns (12);
-		width: 100%;
-	}
-	.four.contact {
-		@include span-columns (12);
-		width: 100%;
-	}
-	.four.sm {
-		@include row ();
-		width: 100%;
-	}
-	.sm-container {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		text-align: center;
-		width: 100%;
-	}
-	.footer {
-		height: 750px;
-		width: 100%;
-		display: block;
-		position: relative;
-	}
-	#contact-area input {
-		width: 100%;
-	}
-	#contact-area textarea {
-		width: 100%;
-	}
-	.round {
-		-webkit-filter: none;
-		border: 5px solid #fff;
-	}
-	.round:hover {
-		-webkit-filter: none;
-	}
-	.information {
-		top: 0;
-
-	}
-	.thumbnail-list {
-		width: 100%;
-	}
-	.thumbnail-list img:hover {
-		width: 100px;
-		top: 0;
-	}
-	.gallery-main img {
-		width: 100%;
-	}
-	.number {
-	display: none;
-	}
-	div.blog-container {
-	@include row();
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 100%;
-	padding-top: 150px;
-	}
-	.blog-entry {
-	@include row();
-	width: 100%;
-	border-bottom: 2px solid $gray;
-	position: relative;
-	padding: 15px;
-	padding-left: auto;
-	padding-right: auto;
-	display: block;
-	font-family: "proxima-nova-soft";
-	}
-	.recent-title {
-	font-size: 30px;
-	border-bottom: 1px solid $black;
-	text-align: center;
-	text-transform: uppercase;
-	padding-bottom: 5px;
-	font-family: "proxima-nova-extra-condensed";
-	}
-	.blog-entry h3 {
-	font-size: 20px;
-	padding: 10px 0px;;
-	margin-top: -8px;
-	border-bottom: 1px solid $gray;
-	}
-	.blog-entry p {
-	white-space: normal;
-	width: 100%;
-	position: relative;
-	display: block;
-	word-wrap: break-word;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: -30px;;
-	}
-
-
-}
-
-@media all and (max-width: 650px ) {
-	.round {
-		width: 100%;
-		height: 200px;
-	}
-	.information {
-		width: 100%;
-	}
-
-}
-
-@media all and (max-width: 550px){
-	.round {
-		width: 100%;
-		height: 150px;
-		padding: 0;
-        margin: 0;
-	}
-	.round img {
-		width: 300px;
-	}
-	.information {
-		width: 100%;
-		height: 100px;
-	}
-	.information h2 {
-		font-size: 20px;
-	}
-	#nav-links ul li a{
-		padding: 30px 5px;
-		margin: 0;
-		font-size: 30px;
-	}
-}
-
-@media
-(-webkit-min-device-pixel-ratio: 2) and (max-device-width:667px) {
-
-	div.three {
-		width: 50%;
-	}
-	.round {
-		width: 100%;
-		height: 450px;
-        padding: 0;
-        margin: 0;
-	}
-	.information {
-		width: 100%;
-		height: 200px;
-	}
-	.information h2 {
-		font-size: 40px;
-	}
-	.head-title img {
-		display: none;
-	}
-
-	.logo {
-		width: 180px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
-	#nav-links ul li a:hover {
-		color: #aa5c27;
-		background-color: $white;
-	}
-	#nav-links ul li a{
-		padding: 30px 5px;
-		margin: 0;
-		font-size: 40px;
-	}
-	#nav-links ul li{
-		padding: 0;
-		margin: 0;
-
-	}
-	#nav-links ul {
-		padding: 0;
-		padding-right: 5px;
-	}
-	div.four {
-		@include span-columns (6);
-
-	}
-	#nav-links .active {
-	background-color:white;;
-	color: #AA5C27;
-	font-weight: 800;
-	}
-	.four.about {
-		@include span-columns (12);
-		width: 100%;
-	}
-	.four.contact {
-		@include span-columns (12);
-		width: 100%;
-	}
-	.four.sm {
-		@include row ();
-		width: 100%;
-	}
-	.sm-container {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		text-align: center;
-		width: 100%;
-	}
-	.footer {
-		height: 1150px;
-	}
-	#contact-area input {
-		width: 100%;
-	}
-	#contact-area textarea {
-		width: 100%;
-	}
-	.round {
-		-webkit-filter: none;
-	}
-	.round:hover {
-		-webkit-filter: none;
-	}
-	.round img {
-		width: 700px;
-	}
-	.information {
-		top: 0;
-
-	}
-	.thumbnail-list {
-		width: 100%;
-	}
-	.thumbnail-list img:hover {
-		width: 100px;
-		top: 0;
-	}
-	.gallery-main img {
-		width: 100%;
-	}
-	.number {
-	display: none;
-	}
-	div.blog-container {
-	@include row();
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 100%;
-	padding-top: 150px;
-	}
-	.blog-entry {
-	@include row();
-	width: 100%;
-	border-bottom: 2px solid $gray;
-	position: relative;
-	padding: 15px;
-	padding-left: auto;
-	padding-right: auto;
-	display: block;
-	font-family: "proxima-nova-soft";
-	}
-	.recent-title {
-	font-size: 30px;
-	border-bottom: 1px solid $black;
-	text-align: center;
-	text-transform: uppercase;
-	padding-bottom: 5px;
-	font-family: "proxima-nova-extra-condensed";
-	}
-	.blog-entry h3 {
-	font-size: 20px;
-	padding: 10px 0px;;
-	margin-top: -8px;
-	border-bottom: 1px solid $gray;
-	}
-	.blog-entry p {
-	white-space: normal;
-	width: 100%;
-	position: relative;
-	display: block;
-	word-wrap: break-word;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: -30px;;
-	}
-	#contact-area input.submit-button {
-		width: 200px;
-		height: 50px;
-		margin-left: 0;
-		margin-right: 0;
-		display: block;
-	}
-	.sm-container img {
-		width: 200px;
-	}
-	#portrait {
-		width: 250px;
-	}
-	.about p {
-		font-size: 30px;
-	}
-	.about img#location {
-		width: 400px;
-	}
-	#contact-area input {
-		height: 50px;
-		padding: 0;
-		margin: 5px 0;
-	}
-	::-webkit-input-placeholder {
-   		font-size: 18px;
-   		margin: 0;
-   		padding: 0;
-   		text-align: left;
-   		font-weight: 600;
-	}
-	div.navigation-container {
-		position: relative;
-	}
-	div.twelve {
-		padding-top: 0;
-	}
-	h1.recent-title {
-		font-size: 90px;
-	}
-	div.blog-entry h3 {
-		font-size: 60px;
-		padding: 0 10px;
-	}
-	div.blog-entry p {
-		font-size: 25px;
-		padding: 0 10px;
-	}
-	}
 /* ANIMATIONS
 ============================================================================= */
 
@@ -900,7 +620,14 @@ textarea {
 
 .sort-icons {
 	padding: 15px;
-	color: $orange;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "proxima-nova-extra-condensed";
+    font-weight: 800;
+
+}
+.sort-icons p {
+    margin: 0;
 }
 .sort-icons li a {
 	color: $orange;

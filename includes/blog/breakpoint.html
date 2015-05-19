@@ -1,0 +1,66 @@
+	<div id="container">
+		<div class="blog-container">
+<div class="blog-entry">
+<h2> Getting Started with SASS Breakpoints </h2>
+    <h4> Ability level: Beginner </h4>
+    
+<p>I don’t know about you, but i’ve spent my time in web design trying to find ways to make mobile-friendly design easier. Media queries have in the past been the bane of my existence, until i stumbled upon a SASS mixin that changed my life.</p>
+
+<p>SASS (Syntactically Awesome Style Sheets) is a way to make working with CSS much more tolerable. Before you’re able to use this Mixin i’m about to explain, be sure you read on what SASS is and how to set it up. Here’s a link to the documentation:</p>
+<a class="reference"href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html">SASS Documentation </a>
+
+<p>Okay, so breakpoint.sass. Let’s start with installing it
+</p>
+
+<p>Open up your command line and navigate to the same folder that you’re storing your stylesheets in.  
+</p>
+
+<span> Installing with Ruby:</span>
+
+<img class="blog-tutorial-img" src="../img/blog/install_example.png"/>
+
+<p>If you get a verification error on a mac or linux, go ahead and add “sudo” before it and terminal will prompt you to enter your administrator password:</p>
+
+<span> "sudo gem install breakpoint" </span>
+
+<p> Or you can install it via bower: </p>
+<span> "bower install breakpoint-sass"</span>
+
+<p>Once you’ve done that, open up your text editor and navigate to your SCSS/SASS file. Be sure to have sass watching and updating, or run your compiling through compass.
+</p>
+
+<span> At the top of your SCSS file, type in: </span>
+
+<img class="blog-tutorial-img"src="../img/blog/import_example.png"/>
+
+<p> Now you're set up to start using breakpoint! </p>
+
+<p>One large advantage to SASS is that you can set variables for values and refer to them later, to make it much easier to be able to change colors / font sizes / etc in the future. Breakpoint allows you to also do this with Media Queries. </p>
+
+<p> First you'll set up your variables at the top of your SCSS document. Here's some I use:</p>
+
+<img class="blog-tutorial-img"src="../img/blog/values_example.png"/>
+
+<p> <i> My last value i listed is targeting devices with high pixel density (retina smartphones / tablets)
+    </i></p>
+
+<p> Once you have those values together, inside of your specified CSS classes / id's you can add a breakpoint. </p>
+
+<span> "@include breakpoint($predefined-value) {}" </span>
+
+<p> Then you'll add your changes for your breakpoint! </p>
+
+<img class="blog-tutorial-img"src="../img/blog/full_example.png"/>
+
+<p> Run through your SASS compiler (either through sass --watch input.scss:output.css or with compass) and it will be converted into a media query! </p>
+
+<p>If you have any problems or questions, please send me a message through my contact form, i’d love to help in any way I can, and the questions will be posted under this tutorial as they’re answered. Happy Coding!
+</p>
+
+
+</div>
+
+</div>
+</div>
+
+    

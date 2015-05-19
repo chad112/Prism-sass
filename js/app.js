@@ -53,6 +53,14 @@ prismApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/oops'
       });
+      $routeProvider.
+      when('/breakpoint', {
+        templateUrl: 'includes/blog/breakpoint.html',
+        controller: 'blogCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
   }]);
 prismApp.config(['$routeProvider',
   function($routeProvider) {
