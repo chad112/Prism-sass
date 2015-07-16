@@ -108,14 +108,12 @@ div.four {
     }
 }
 .head-title img {
-    padding: 5px;
+    margin: 5px;
+	margin-left: 15px;
     display: block;
     position: relative;
     float: left;
-    @include breakpoint($break-small) {
-        width: 150px;
-        margin-top: 10px;
-    }
+	width: 200px;
 }
 #nav-links {
     float: right;

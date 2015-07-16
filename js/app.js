@@ -169,14 +169,6 @@ prismApp.config(['$routeProvider',
         redirectTo: '/oops'
       });
       $routeProvider.
-      when('/apocalypse', {
-        templateUrl: 'apocalypse.html',
-        controller: 'workCtrl'
-      }).
-      otherwise({
-        redirectTo: '/oops'
-      });
-      $routeProvider.
       when('/easter', {
         templateUrl: 'easter.html',
         controller: 'workCtrl'

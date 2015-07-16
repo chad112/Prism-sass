@@ -120,14 +120,12 @@ div.four {
         margin-right: 0; } }
 
 .head-title img {
-  padding: 5px;
+  margin: 5px;
+  margin-left: 15px;
   display: block;
   position: relative;
-  float: left; }
-  @media (max-width: 550px) {
-    .head-title img {
-      width: 150px;
-      margin-top: 10px; } }
+  float: left;
+  width: 200px; }
 
 #nav-links {
   float: right;
