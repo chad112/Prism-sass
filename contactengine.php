@@ -3,9 +3,27 @@
 $EmailFrom = "mrdraper@chadschaub.com";
 $EmailTo = "chad@chadschaub.com";
 $Subject = "PRISM Inquiry";
-$Name = Trim(stripslashes($_POST['Name']));
-$Email = Trim(stripslashes($_POST['Email']));
-$Message = Trim(stripslashes($_POST['Message']));
+$Name = Trim($_POST['Name']);
+if(empty($Name))
+{
+	echo "Please enter your name";
+	exit;
+}
+echo "success";
+$Email = Trim($_POST['Email']);
+if(empty($Email))
+{
+	echo "Please enter your email";
+	exit;
+}
+echo "success";
+$Message = Trim($_POST['Message']);
+if(empty($Message))
+{
+	echo "Don't you want to say something?";
+	exit;
+}
+echo "success";
 
 // prepare email body text
 $Body = "";

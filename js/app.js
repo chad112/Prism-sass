@@ -216,6 +216,14 @@ prismApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/oops'
       });
+		$routeProvider.
+      when('/fall-kickoff', {
+        templateUrl: 'fall-kickoff.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
   }]);
 
 prismApp.directive('galleryThumbs', function() { return { restrict: 'E', templateUrl: 'includes/gallery.html' }; });
