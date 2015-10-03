@@ -16,6 +16,15 @@ prismApp.config(['$routeProvider',
       });
       
     $routeProvider.
+      when('/thirdwave', {
+        templateUrl: 'thirdwave.html',
+        controller: 'workCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
+      
+    $routeProvider.
       when('/web', {
         templateUrl: 'includes/web.html',
         controller: 'webCtrl'
