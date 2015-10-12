@@ -65,7 +65,6 @@ a {
 body {
 	margin: 0;
 	font-family:"proxima-nova-extra-condensed, sans-serif";
-	background: $background;
 }
 .texture {
 	background: url('img/pattern-noise.png');
@@ -113,6 +112,9 @@ div.four {
     position: relative;
     float: left;
 	width: 200px;
+    @include breakpoint ($break-medium) {
+        width: 175px;
+    }
 }
 #nav-links {
     float: right;
@@ -140,6 +142,9 @@ div.four {
 	padding: 50px 10px;
 	margin: 15px 0;
 	border-radius: 10px;
+    @include breakpoint ($break-medium) {
+        font-size: 20px;
+    }
 }
 #nav-links li a:hover {
 	color: $orange;
@@ -169,10 +174,9 @@ div.four {
 	font-family: "proxima-nova-extra-condensed";
     overflow: hidden;
     @include breakpoint($break-medium){
-        background: none;
+        height: 800px;
     }
     @include breakpoint($break-mobile){
-        background: none;
     }
 }
 #portrait {
@@ -419,7 +423,7 @@ width: 550px;
 	width: 100px;
 	transition: 0.5s ease;
     @include breakpoint($break-medium) {
-        width: 60px;
+        width: 120px;
     }
     @include breakpoint($break-mobile) {
         width: 60px;

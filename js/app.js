@@ -70,6 +70,14 @@ prismApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/oops'
       });
+      $routeProvider.
+      when('/target', {
+        templateUrl: 'includes/blog/target.html',
+        controller: 'blogCtrl'
+      }).
+      otherwise({
+        redirectTo: '/oops'
+      });
   }]);
 prismApp.config(['$routeProvider',
   function($routeProvider) {
@@ -233,6 +241,9 @@ prismApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/oops'
       });
+      
+      
   }]);
 
 prismApp.directive('galleryThumbs', function() { return { restrict: 'E', templateUrl: 'includes/gallery.html' }; });
+
